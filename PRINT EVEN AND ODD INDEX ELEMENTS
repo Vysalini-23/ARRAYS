@@ -1,0 +1,6 @@
+arr = list(map(int, input().split()))
+for i in range(len(arr)):
+    if i % 2 == 1:
+        print("Odd index element:",arr[i])
+    else:
+        print("even index element:",arr[i])
