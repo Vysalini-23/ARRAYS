@@ -12,8 +12,8 @@ print("After Rightrotate the array is:", rotate_array)
 2
 
 This means: nums = [1, 2, 3, 4, 5]
-k = 2 → Left rotate by 2 positions
+k = 2 → right rotate by 2 positions
 
 📤 Output:
-After rotate the array is: [3, 4, 5, 1, 2]
+After rotate the array is: [4, 5, 1, 2 , 3]
 
