@@ -1,0 +1,19 @@
+nums = list(map(int, input().split()))
+k = int(input())
+n = len(nums)
+rotate_array = [0]*n
+for i in range(n):
+    rotate_array[(i+k)%n] = nums[i]
+nums[:] = rotate_array[:]
+print("After Rightrotate the array is:", rotate_array)
+
+📥 Sample Input:
+1 2 3 4 5
+2
+
+This means: nums = [1, 2, 3, 4, 5]
+k = 2 → Left rotate by 2 positions
+
+📤 Output:
+After rotate the array is: [3, 4, 5, 1, 2]
+
