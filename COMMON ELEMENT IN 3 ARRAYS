@@ -1,0 +1,27 @@
+arr1=[3,4,6,7,8,10]
+arr2=[6,8,9,4,5,3,10]
+arr3=[7,8,5,7,10,3,7]
+result=[]
+for i in range(len(arr1)):
+    if arr1[i] in arr2 and arr1[i] in arr3:
+        if arr1[i] not in result:
+            result.append(arr1[i])
+if result:
+    print(result)
+else:
+    print([-1])
+
+
+
+class Solution:
+    def commonElements(self, arr1, arr2, arr3):
+        # Convert lists to sets to remove duplicates and allow fast lookup
+        set1 = set(arr1)
+        set2 = set(arr2)
+        set3 = set(arr3)
+
+        # Find common elements using set intersection
+        common = list(set1 & set2 & set3)
+
+        # Return sorted result if found, else return [-1]
+        return sorted(common) if common else [-1]
