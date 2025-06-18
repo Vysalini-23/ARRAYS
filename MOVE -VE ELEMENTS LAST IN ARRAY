@@ -1,0 +1,30 @@
+arr=list(map(int,input().split()))
+s=[]
+v=[]
+for i in range(len(arr)):
+    if arr[i]<0:
+        s.append(arr[i])
+        #print(s)
+    else:
+        v.append(arr[i])
+        #print(v)
+print(v+s)
+
+
+
+
+
+class Solution:
+    def segregateElements(self, arr):
+        # Your code goes here
+        pos=[]
+        neg=[]
+        for i in range(len(arr)):
+            if arr[i]<0:
+               neg.append(arr[i])
+            else:
+               pos.append(arr[i])
+        for i in range(len(pos)):
+            arr[i] = pos[i]
+        for i in range(len(neg)):
+            arr[i + len(pos)] = neg[i]
