@@ -1,0 +1,32 @@
+def first_occurence(arr,target):
+    low,high=0,len(arr)-1 
+    first=-1 
+    while low<=high: 
+        mid=(low+high) 
+        if arr[mid]==target:
+            first=mid 
+            high=mid-1 
+        elif arr[mid]<target:
+            low=mid+1 
+        else: 
+            high=mid-1 
+    return first 
+def last_occurence(arr,target):
+    low,high=0,len(arr)-1 
+    last=-1 
+    while low<=high: 
+        mid=(low+high) 
+        if arr[mid]==target:
+            last=mid 
+            low=mid+1 
+        elif arr[mid]<target:
+            low=mid+1 
+        else: 
+            high=mid-1 
+    return last 
+arr=[int(x)for x in input().split()]
+target=int(input()) 
+first=first_occurence(arr,target)
+last=last_occurence(arr,target)
+print(last-first+1)
+    
