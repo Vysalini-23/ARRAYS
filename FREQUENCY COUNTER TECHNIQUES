@@ -1,0 +1,49 @@
+
+# Count Occurrences of Each Element
+
+from collections import Counter
+
+arr = list(map(int, input("Enter elements: ").split()))
+freq = Counter(arr)
+
+print("Frequency of elements:")
+for key, value in freq.items():
+    print(f"{key}: {value}")
+
+
+
+ #Find Majority Element (Appears > n/2 times) 
+
+from collections import Counter
+arr = list(map(int, input("Enter elements: ").split()))
+freq = Counter(arr)
+n = len(arr)
+
+majority = -1
+for key, value in freq.items():
+    if value > n // 2:
+        majority = key
+        break
+
+if majority != -1:
+    print("Majority element is:", majority)
+else:
+    print("No majority element.")  
+
+
+
+
+
+#Find Duplicates in Array 
+from collections import Counter
+
+arr = list(map(int, input("Enter elements: ").split()))
+freq = Counter(arr)
+
+print("Duplicates:")
+for key, value in freq.items():
+    if value > 1:
+        print(key)
+
+
+
