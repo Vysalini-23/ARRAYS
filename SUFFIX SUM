@@ -1,0 +1,9 @@
+arr = list(map(int, input().split()))
+i = int(input())  
+n = len(arr)
+suffix = [0] * n
+suffix[-1] = arr[-1]
+for j in range(n - 2, -1, -1):
+    suffix[j] = suffix[j + 1] + arr[j]
+print("Suffix Sum Array:", suffix)
+print(f"Sum from index {i} to end is:", suffix[i])
