@@ -1,0 +1,35 @@
+arr=list(map(int,input().split()))
+k=int(input())
+seen={0:1} 
+curr_sum=0 
+count=0 
+for num in arr:
+    curr_sum += num 
+    diff=curr_sum-k 
+    if diff in seen:
+        count+=seen[diff] 
+    if curr_sum in seen:
+        seen[curr_sum]+=1 
+    else: 
+        seen[curr_sum]=1 
+print(count) 
+
+
+
+
+
+
+
+
+arr = list(map(int, input().split()))
+k = int(input())
+n = len(arr)
+count = 0
+for start in range(n):
+    total = 0
+    for end in range(start, n):
+        total += arr[end]
+        if total == k:
+            count += 1
+
+print(count)
