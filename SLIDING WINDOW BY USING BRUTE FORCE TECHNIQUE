@@ -1,0 +1,31 @@
+arr=[int(x)for x in input().split()]
+ans=0
+for i in range(len(arr)):
+    s=[]
+    s1=0
+    for j in range(i,len(arr)):
+        s.append(arr[j])
+        s1+=arr[j]
+        #print(s)
+        if len(s)==3:
+            print(s,s1)
+            ans=max(ans,s1)
+print(ans)
+
+
+
+
+arr=[int(x)for x in input().split()]
+ans=0
+for i in range(len(arr)):
+    s=[]
+    s1=0
+    for j in range(i,len(arr)):
+        for k in range(i,j+1):
+            s.append(arr[j])
+            s1+=arr[j]
+        #print(s)
+        if len(s)==3:
+            print(s,s1)
+            ans=max(ans,s1)
+print(ans)
